@@ -1,0 +1,123 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&family=Montserrat:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Montserrat:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box; /*reduces content size after adding margin and padding */
+}
+
+  
+/* Parallax effet */
+.wrapper{
+    height: 100vh;
+    /* width: 100%; */
+    overflow-x: hidden; /* to stop scrolling in x axis */
+    /* overflow-y: auto; */
+    perspective: 10px; /* to enabble z index */
+
+}
+
+h2, p{
+    font-family: 'Alegreya Sans', sans-serif;
+    
+}
+
+.container{
+    height: 100%;
+    position: relative; /* to make flex items position absolute */
+    display: flex;
+    justify-content: center; /* center items */
+    align-items: center;/* center items */
+    transform-style:preserve-3d; /* to preserve 3D changes */
+    z-index: -1; /* helps in overlapping/layering */
+}
+
+.background, .foreground{
+    height: 100%;
+    width: 100%;
+    position: absolute; /* helps overlap backgroung and foreground images */
+    z-index: -1; /* helps in layering (makes the heading come on top of images layer) */
+    object-fit: cover; /* fits the image in container */
+} 
+
+.background{
+    transform: translateZ(-40px) scale(5); /* translateZ(-40px) makes background image smaller by placing it -40px on z-axis away from eye level and scale(5) scales image to fit the viewport  */
+}
+
+.foreground{
+    transform: translateZ(-20px) scale(3); 
+}
+
+h1{
+    position: absolute;
+    font-size: 10rem;
+    top:5rem;
+    color: white;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   
+    font-family: 'Alegreya Sans', sans-serif;
+    
+}
+
+section{
+    background-color: rgb(45, 45, 45);
+    color: antiquewhite;
+    padding: 5rem 0;
+}
+
+
+
+.secHead{
+    font-size: 5rem;
+    padding: 0 10rem;
+
+}
+.bg{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+.bg1{
+background-image: url(sport-1.jpg);
+}
+
+.bg2{
+    background-image: url(sport-2.jpg);
+ }
+
+.bg3{
+        background-image: url(sport-3.jpg);
+ }
+
+
+
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+.description{
+    position: absolute;
+    background-color: antiquewhite;
+    padding: 0.5rem 2.5rem;
+   top: 50%;
+   left: 50%;
+   transform: translateX(-103%) translateY(-50%); 
+   color: black;
+   font-size: 3.5rem;
+   font-weight: 600;
+}
+h3{
+    text-align: center;
+    font-size: 1.5rem;
+}
