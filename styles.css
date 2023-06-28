@@ -17,7 +17,7 @@
     /* width: 100%; */
     overflow-x: hidden; /* to stop scrolling in x axis */
     /* overflow-y: auto; */
-    perspective: 10px; /* to enabble z index */
+    perspective: 10px; /* to enable z index */
 
 }
 
@@ -28,7 +28,7 @@ h2, p{
 
 .container{
     height: 100%;
-    position: relative; /* to make flex items position absolute */
+    position: relative; /* helps to make flex items position absolute */
     display: flex;
     justify-content: center; /* center items */
     align-items: center;/* center items */
