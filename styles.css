@@ -14,10 +14,10 @@
 /* Parallax effet */
 .wrapper{
     height: 100vh;
-    /* width: 100%; */
+    width: 100%;
     overflow-x: hidden; /* to stop scrolling in x axis */
-    /* overflow-y: auto; */
-    perspective: 10px; /* to enable z index */
+    overflow-y: auto;
+    perspective: 10px; /* to enable 3d axis and z index */
 
 }
 
@@ -30,7 +30,7 @@ h2, p{
     height: 100%;
     position: relative; /* helps to make flex items position absolute */
     display: flex;
-    justify-content: center; /* center items */
+    justify-content: center; /* center content */
     align-items: center;/* center items */
     transform-style:preserve-3d; /* to preserve 3D changes */
     z-index: -1; /* helps in overlapping/layering */
@@ -41,7 +41,7 @@ h2, p{
     width: 100%;
     position: absolute; /* helps overlap backgroung and foreground images */
     z-index: -1; /* helps in layering (makes the heading come on top of images layer) */
-    object-fit: cover; /* fits the image in container */
+    object-fit: cover; /* image fits the centire container */
 } 
 
 .background{
@@ -50,16 +50,19 @@ h2, p{
 
 .foreground{
     transform: translateZ(-20px) scale(3); 
+     /* translateZ(-20px) makes background image smaller by placing it -20px on z-axis away from eye level and scale(3) scales image to fit the viewport  */
 }
 
 h1{
     position: absolute;
+    top: 3rem;
     font-size: 10rem;
     top:5rem;
     color: white;
     letter-spacing: 4px;
+    /* offset-x | offset-y | blur-radius | color */
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-   
+
     font-family: 'Alegreya Sans', sans-serif;
     
 }
@@ -82,8 +85,10 @@ section{
     width: 100%;
     height: 500px;
     /* Specifies whether the background images are fixed with regard to the viewport ('fixed') or scroll along with the element ('scroll') or its contents ('local'). */
+    /* to fix bg-image and stop it from scrolling */
     background-attachment: fixed; 
     background-position: center;
+    /* same function as object cover */
     background-size: cover;
     display: flex;
    justify-content: center;
@@ -116,7 +121,7 @@ background-image: url(sport-1.jpg);
     padding: 0.5rem 2.5rem;
    /* top: 50%;
    left: 50%;*/
-   transform: translateX(-103%) translateY(-50%);  
+   /* transform: translateX(-103%) translateY(-50%);   */
    
    color: black;
    font-size: 3.5rem;
@@ -126,4 +131,14 @@ h3{
     text-align: center;
     font-size: 1.5rem;
 
+}
+
+@media (max-width:900px){
+    h1{
+        font-size: 7rem;
+        transition: all 1s ease;
+    }
+    p{
+        text-align: justify;
+    }
 }
