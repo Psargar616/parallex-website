@@ -64,7 +64,13 @@ h1{
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
     font-family: 'Alegreya Sans', sans-serif;
+    transition: all 1s ease;
     
+}
+
+h1:hover{
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #010101 ;
 }
 
 section{
@@ -126,6 +132,12 @@ background-image: url(sport-1.jpg);
    color: black;
    font-size: 3.5rem;
    font-weight: 600;
+   border-radius: 1px;
+   transition: all 1s ease;
+}
+
+.description:hover{
+    transform: scale(1.1);
 }
 h3{
     text-align: center;
